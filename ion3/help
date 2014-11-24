@@ -1,0 +1,36 @@
+ION3 BINDINGS
+
+`Mod1' is the left ALT key and `Mod4' any WINDOWS key.
+
+   Mod4+S: split frame vertically
+   Mod4+D: split frame horizontally
+   Mod4+F: resize or move frame, then:
+       <arrow>: grow in specified direction
+       Mod4+<arrow>: shrink in specified direction
+       Mod4+Shift+<arrow>: move in specified direction
+   Mod4+G: close object
+   Mod4+H: unsplit frames
+   Mod4+J: create new workspace
+   Mod4+K: kill window
+
+   Mod4+E: detach window or reattach it to its previous location
+   Mod4+R: attach window to frame
+   Mod4+T: toggle tag for this window
+   Mod4+Y: tile frame if no tiling exists
+   Mod4+U: clear all tags
+
+   Mod1+Space: scratchpad
+   Mod4+[12345]: go to specified workspace
+   Mod4+Return: fullscreen
+   Mod4+<arrow>: go to next frame in this direction
+   Mod4+Shift+<arrow>: go to next screen in this direction
+   Mod4+Tab: next tab
+   Mod4+Shift+Tab: previous tab
+   Mod4+Escape: exit ion3
+   Mod4+Shift+Escape: restart ion3
+
+   Mod4+F1: display this help
+   Mod4+F2: web browser ($BROWSER)
+   Mod4+F3: terminal emulator ($TERM)
+   Mod4+L: lock screen using xlock
+   Mod4+PrtScr: take a screenshot using scrot

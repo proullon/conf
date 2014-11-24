@@ -6,6 +6,7 @@ cd
 ln -s $old/bash_aliases .bash_aliases
 ln -s $old/bash_profile .bash_profile
 ln -s $old/gitconfig .gitconfig
+ln -s $old/ion3 .notion
 
 echo "if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

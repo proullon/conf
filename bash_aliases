@@ -1,3 +1,6 @@
+export BROWSER='/usr/bin/chromium'
+export XTERM='/bin/bash'
+
 # editor alias
 alias emacs='emacs -nw'
 alias sublime='~/work/bin/st2/sublime_text'
