@@ -5,6 +5,9 @@ export XTERM='/bin/bash'
 alias emacs='emacs -nw'
 alias sublime='~/work/bin/st2/sublime_text'
 
+# go aliases
+alias lcd='cd ~/work/src/github.com/$USER/'
+
 # git aliases
 alias g='git gui &'
 alias k='gitk --all &'
