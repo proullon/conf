@@ -91,10 +91,10 @@ end
 defbindings("WScreen", {
     bdoc("Base controls"),
     kpress(ALTMETA.."F1", "ioncore.exec_on(_, 'xmessage -file ~/.notion/help')"),
-    kpress(ALTMETA.."F2", "ioncore.exec_on(_, '".. os.getenv("BROWSER") .."')"),
-    kpress(ALTMETA.."Shift+F2", "ioncore.exec_on(_, '".. os.getenv("BROWSER") .. " --incognito')"),
+    kpress(ALTMETA.."F2", "ioncore.exec_on(_, '/usr/bin/chromium')"),
+    kpress(ALTMETA.."Shift+F2", "ioncore.exec_on(_, '/usr/bin/chromium --incognito')"),
     kpress(ALTMETA.."F3", "ioncore.exec_on(_, '/usr/bin/gnome-terminal')"),
-    kpress(ALTMETA.."F4", "ioncore.exec_on(_, 'pavucontrol')"),
+    kpress(ALTMETA.."F4", "ioncore.exec_on(_, '/usr/bin/xterm')"),
     kpress(ALTMETA.."Print", "ioncore.exec_on(_, 'scrot')"),
     kpress(ALTMETA.."L", "ioncore.exec_on(_, 'slock')"),
 
