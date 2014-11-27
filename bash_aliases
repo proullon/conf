@@ -3,7 +3,7 @@ export XTERM='/bin/bash'
 
 # editor alias
 alias emacs='emacs -nw'
-alias sublime='~/work/bin/st2/sublime_text'
+alias sublime='sublime_text'
 
 # go aliases
 alias lcd='cd ~/work/src/github.com/$USER/'
