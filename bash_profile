@@ -17,7 +17,7 @@ PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$PURPLE
 
 # More complexe aliases needing func
 function ctest {
-	clear;echo;echo;go install $1 && clear && echo && echo && go test -cover $1
+	clear;echo;echo;go install $1 && clear && echo && echo && go vet $1 && clear && echo && echo && go test -cover $1
 }
 
 function sub {
