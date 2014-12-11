@@ -1,4 +1,6 @@
+-- Keyboard left Alt
 META="Mod1+"
+-- Keyboard Windows key
 ALTMETA="Mod4+"
 
 -- Some basic settings
