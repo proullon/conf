@@ -24,3 +24,8 @@ function sub {
     echo -n "Opening " $1 "with sublime_text"
     sublime $1 & > /dev/null
 }
+
+# In case of local profile conf
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile_local
+fi
