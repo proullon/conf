@@ -1,3 +1,6 @@
+# set layout
+which setxkbmap && setxkbmap us -variant intl
+
 # Reset
 Color_Off='\e[0m'       # Text Reset
 
@@ -26,6 +29,7 @@ function sub {
 }
 
 # In case of local profile conf
-if [ -f ~/.bash_profile ]; then
+if [ -f ~/.bash_profile_local ]
+then
     . ~/.bash_profile_local
 fi
