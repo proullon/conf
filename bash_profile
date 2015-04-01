@@ -12,12 +12,12 @@ CYAN='\e[0;36m'         # Cyan
 WHITE='\e[0;37m'        # White
 
 # Change shell prompt
-PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$PURPLE\]\$(__git_ps1)\[$WHITE\]
+PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$RED\]@\[$BLUE\]\h\[$YELLOW\]\w\[\033[m\]\[$PURPLE\]\$(__git_ps1)\[$WHITE\]
 \$ "
 
 # More complexe aliases needing func
 function ctest {
-	clear;echo;echo;go install $1 && clear && echo && echo && go vet $1 && clear && echo && echo && go test -cover $1
+	clear;echo;echo;go install $1 && clear && echo && echo && go vet $1 && clear && echo && echo && golint $1 && echo && echo && go test -cover -race $1
 }
 
 function sub {
