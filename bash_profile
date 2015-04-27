@@ -1,5 +1,8 @@
 # set layout
-which setxkbmap && setxkbmap us -variant intl
+which setxkbmap > /dev/null && setxkbmap us -variant intl
+
+# Set FULL COLOR TERM !!
+export TERM=xterm-256color
 
 # Reset
 Color_Off='\e[0m'       # Text Reset
