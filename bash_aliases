@@ -4,6 +4,8 @@ export XTERM='/bin/bash'
 # editor alias
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
+alias ne='emacs'
+alias v='vim .'
 
 # go aliases
 alias lcd='cd ~/work/src/github.com/$USER/'
