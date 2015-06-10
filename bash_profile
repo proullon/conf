@@ -31,6 +31,10 @@ function sub {
     sublime $1 & > /dev/null
 }
 
+function dockin {
+    docker run -it $* /bin/bash
+}
+
 # In case of local profile conf
 if [ -f ~/.bash_profile_local ]
 then

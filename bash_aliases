@@ -5,7 +5,7 @@ export XTERM='/bin/bash'
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
 alias ne='emacs'
-alias v='vim .'
+alias v='vim -c "NERDTree" .'
 
 # go aliases
 alias lcd='cd ~/work/src/github.com/$USER/'
