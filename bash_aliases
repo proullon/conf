@@ -1,10 +1,12 @@
 export BROWSER='/usr/bin/chromium'
 export XTERM='/bin/bash'
+export EDITOR='/usr/bin/vim'
 
 # editor alias
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
 alias ne='emacs'
+alias bim='vim'
 alias v='vim -c "NERDTree" .'
 
 # go aliases
