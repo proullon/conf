@@ -2,6 +2,10 @@ export BROWSER='/usr/bin/chromium'
 export XTERM='/bin/bash'
 export EDITOR='/usr/bin/vim'
 
+# Mnemo aliases
+alias size='du -h -d 1'
+alias docker-cleanup='docker rm $(docker ps -q -a --filter="dangling=true");docker rmi $(docker images -q -a --filter "dangling=true")'
+
 # editor alias
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
