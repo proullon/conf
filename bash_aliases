@@ -28,4 +28,9 @@ alias sl='ls'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias token='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;'
+
+alias t2='tree -h -d -L 2'
+alias t1='tree -h -d -L 1'
+alias t='t2'
+
+alias perm="stat -c '%A %a %n'"
