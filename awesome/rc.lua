@@ -54,18 +54,18 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
+--    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+--    awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
+--    awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+--    awful.layout.suit.max.fullscreen
+--    awful.layout.suit.magnifier
 }
 -- }}}
 
@@ -197,11 +197,9 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
---    awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
---    awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
-    awful.key({ modkey,           }, "j",
+    awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.byidx( 1)
             if client.focus then client.focus:raise() end
@@ -214,30 +212,18 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
 
     -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
+    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx( 1)    end),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end),
 
     -- Screen manipulation
     awful.key({ modkey,           }, "Left", function () awful.screen.focus_relative( 1) end),
     awful.key({ modkey,           }, "Right", function () awful.screen.focus_relative(-1) end),
+    -- Tag switch    
+    awful.key({ modkey,           }, "Up",  awful.tag.viewnext     ),
+    awful.key({ modkey,           }, "Down",   awful.tag.viewprev  ),
     -- Lock screen
     awful.key({ modkey,           }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
-
-    -- Tiles resizing
-    --awful.key({ modkey, "Shift"   }, "Right",  function () awful.tag.incmwfact( 0.01)    end),
-    --awful.key({ modkey, "Shift"   }, "Left",   function () awful.tag.incmwfact(-0.01)    end),
-    --awful.key({ modkey, "Shift"   }, "Down",   function () awful.client.incwfact( 0.01)    end),
-    --awful.key({ modkey, "Shift"   }, "Up",     function () awful.client.incwfact(-0.01)    end),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
@@ -250,12 +236,7 @@ globalkeys = awful.util.table.join(
     -- Tiles resizing
     awful.key({ modkey, "Shift"   }, "Left",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey, "Shift"   }, "Right",     function () awful.tag.incmwfact(-0.05)    end),
-    --awful.key({ modkey, "Shift"   }, "Right",     function () awful.tag.incnmaster( 1)      end),
-    --awful.key({ modkey, "Shift"   }, "Left",     function () awful.tag.incnmaster(-1)      end),
     
-    -- Set tiles in column mode
-    --awful.key({ modkey, "Control" }, "Right",     function () awful.tag.incncol( 1)         end),
-    --awful.key({ modkey, "Control" }, "Left",     function () awful.tag.incncol(-1)         end),
     -- Switch layout
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
