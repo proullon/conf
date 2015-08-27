@@ -4,6 +4,9 @@ which setxkbmap > /dev/null && setxkbmap us -variant intl
 # Set FULL COLOR TERM !!
 export TERM=xterm-256color
 
+# Set editor as vim
+export EDITOR=vim
+
 # Reset
 Color_Off='\e[0m'       # Text Reset
 
