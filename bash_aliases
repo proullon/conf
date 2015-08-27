@@ -6,6 +6,10 @@ export EDITOR='/usr/bin/vim'
 alias size='du -h -d 1'
 alias docker-cleanup='docker rm $(docker ps -q -a --filter="dangling=true");docker rmi $(docker images -q -a --filter "dangling=true")'
 
+# Mnemo aliases
+alias size='du -h -d 1'
+alias docker-cleanup='docker rm $(docker ps -q -a --filter="dangling=true");docker rmi $(docker images -q -a --filter "dangling=true")'
+
 # editor alias
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
