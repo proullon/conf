@@ -26,7 +26,7 @@ PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$RED\]@\[$BLUE\]\h\[$YELLOW\]\w\[\033[m\]
 
 # More complexe aliases needing func
 function ctest {
-	clear;echo;echo;go install $1 && clear && echo && echo && go vet $1 && clear && echo && echo && golint $1 && echo && echo && go test -cover -race $1
+clear;echo;echo;go install $1 && clear && echo && echo &&  go vet `go list $1 | grep -v vendor` && clear && echo && echo && for pkg in $(go list $1 |grep -v /vendor/); do golint $pkg; done && echo && echo && go test -cover -race `go list $1 | grep -v /vendor/`
 }
 
 function sub {
