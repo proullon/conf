@@ -7,6 +7,9 @@ export TERM=xterm-256color
 # Set editor as vim
 export EDITOR=vim
 
+# Improve cd completion
+export CDPATH=.:$GOPATH/src/github.com:$GOPATH/src/:$GOPATH/src/github.com/proullon
+
 # Reset
 Color_Off='\e[0m'       # Text Reset
 
