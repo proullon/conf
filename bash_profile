@@ -32,6 +32,11 @@ function ctest {
 clear;echo;echo;go install $1 && clear && echo && echo &&  go vet `go list $1 | grep -v vendor` && clear && echo && echo && for pkg in $(go list $1 |grep -v /vendor/); do golint $pkg; done && echo && echo && go test -cover -race `go list $1 | grep -v /vendor/`
 }
 
+# Alias for Go projects using gb
+function gtest {
+clear;echo;echo;gb build $1 && clear && echo && echo &&  go vet `go list $1 | grep -v vendor` && clear && echo && echo && for pkg in $(go list $1 |grep -v /vendor/); do golint $pkg; done && echo && echo && gb test -cover  
+}
+
 function sub {
     echo -n "Opening " $1 "with sublime_text"
     sublime $1 & > /dev/null
