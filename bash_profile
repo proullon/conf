@@ -46,6 +46,8 @@ function dockin {
     docker run -it $* /bin/bash
 }
 
+source ~/.git-prompt.sh
+
 # In case of local profile conf
 if [ -f ~/.bash_profile_local ]
 then
