@@ -23,8 +23,12 @@ alias lg='git log --graph --all --decorate'
 alias gt='git status'
 alias gd='git diff'
 alias gg='git grep -n'
+alias gp='git pull'
+alias gc='git checkout'
+alias gm='git checkout master'
 
 # some more ls aliases
+alias ls='ls --color'
 alias sl='ls'
 alias ll='ls -l'
 alias la='ls -A'
