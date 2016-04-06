@@ -47,3 +47,9 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 
+" I want line number
+set number
+
+" I want :GoDef on gv and :GoInstall on gi
+map gv :<C-U>call go#def#JumpMode("vsplit")<CR>
+map gi :<C-U>call go#cmd#Install(!g:go_jump_to_error)<CR>
