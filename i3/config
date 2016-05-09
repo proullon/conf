@@ -46,9 +46,10 @@ bindsym $mod+d exec dmenu_run
 
 # change focus with win-tab
 # Expected one of these tokens: 'left', 'right', 'up', 'down', 'output', 'tiling', 'floating', 'mode_toggle', 'parent', 'child', <end>
-bindsym $mod+Tab focus left 
-bindsym $mod+Shift+Tab focus right 
- 
+#bindsym $mod+Tab focus left 
+#bindsym $mod+Shift+Tab focus right 
+bindsym $mod+Tab exec ~/.i3/tab_windows.sh 
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
