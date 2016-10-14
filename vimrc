@@ -53,3 +53,7 @@ set number
 " I want :GoDef on gv and :GoInstall on gi
 map gv :<C-U>call go#def#JumpMode("vsplit")<CR>
 map gi :<C-U>call go#cmd#Install(!g:go_jump_to_error)<CR>
+
+:" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+:inoremap <C-a> <Home>
+:inoremap <C-e> <End>
