@@ -23,8 +23,17 @@ Plug '~/my-prototype-plugin'
 " vim-go plugin
 Plug 'fatih/vim-go'
 
+" Scala plugin
+Plug 'derekwyatt/vim-scala'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Configuration for vim-scala
+au BufRead,BufNewFile *.sbt set filetype=scala
+
 " CtrlP my love
 Plug 'kien/ctrlp.vim'
+
+" Angular
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 

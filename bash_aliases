@@ -10,6 +10,7 @@ alias docker-cleanup='docker rm $(docker ps -q -a --filter="dangling=true");dock
 alias emacs='emacs -nw'
 alias sublime='sublime_text'
 alias ne='emacs'
+alias vim='TERM=screen-256color vim'
 alias bim='vim'
 alias v='vim -c "NERDTree" .'
 
