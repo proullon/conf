@@ -19,7 +19,6 @@ alias lcd='cd ~/work/src/github.com/$USER/'
 
 # git aliases
 alias g='git gui &'
-alias k='gitk --all &'
 alias lg='git log --graph --all --decorate'
 alias gt='git status'
 alias gd='git diff'
@@ -42,3 +41,5 @@ alias t1='tree -h -d -L 1'
 alias t='t2'
 
 alias perm="stat -c '%A %a %n'"
+
+alias k='kubectl'
