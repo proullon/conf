@@ -15,5 +15,7 @@ ln -s $old/vimrc .vimrc
 ln -s $old/i3 .i3
 
 ln -s $old/bashrc .bashrc
+ln -s $old/tmux.conf .tmux.conf
+ln -s $old/tmux.conf.local .tmux.conf.local
 
-cd $old
+

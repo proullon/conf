@@ -16,6 +16,8 @@ alias v='vim -c "NERDTree" .'
 
 # go aliases
 alias lcd='cd ~/work/src/github.com/$USER/'
+alias cdc='cd'
+alias ccd='cd'
 
 # git aliases
 alias g='git gui &'
@@ -43,3 +45,8 @@ alias t='t2'
 alias perm="stat -c '%A %a %n'"
 
 alias k='kubectl'
+
+# tmux
+alias tls='tmux list-session'
+alias ta='tmux attach-session -t '
+alias tn='tmux new -s '
