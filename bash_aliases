@@ -12,7 +12,7 @@ alias sublime='sublime_text'
 alias ne='emacs'
 alias vim='TERM=screen-256color vim'
 alias bim='vim'
-alias v='vim -c "NERDTree" .'
+alias v='nvim -c "NERDTree" .'
 
 # go aliases
 alias lcd='cd ~/work/src/github.com/$USER/'
@@ -47,6 +47,6 @@ alias perm="stat -c '%A %a %n'"
 alias k='kubectl'
 
 # tmux
-alias tls='tmux list-session'
-alias ta='tmux attach-session -t '
-alias tn='tmux new -s '
+alias tls='tmux -2 list-session'
+alias ta='tmux -2 attach-session -t '
+alias tn='tmux -2 new -s '
