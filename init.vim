@@ -30,6 +30,9 @@ set ttyfast                 " Speed up scrolling in Vim
 " enable pasting from clipboard
 set mouse=r
 
+" remap exiting from terminal with Esc
+noremap <Esc> <C-\><C-n>
+
 " I want small tabs
 set tabstop=2
 set softtabstop=2
@@ -51,6 +54,8 @@ call plug#begin("~/.vim/plugged")
  Plug 'honza/vim-snippets'
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
+ " Markdown preview
+ Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
  " CtrlP my love
  Plug 'ctrlpvim/ctrlp.vim'
  " NERDTree
@@ -87,6 +92,9 @@ map gi :<C-U>call go#cmd#Install(!g:go_jump_to_error)<CR>
 " SublimeText ctrl-p shortcut
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Disable vim-go automatic import adding/removal
+let g:go_imports_autosave = 0
 
 lua << END
 -- Start git setup in status bbar
