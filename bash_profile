@@ -14,3 +14,4 @@ fi
 
 # Sourcing gitprompt
 source ~/.git-prompt.sh
+. "$HOME/.cargo/env"
