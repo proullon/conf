@@ -96,6 +96,12 @@ let g:ctrlp_cmd = 'CtrlP'
 " Disable vim-go automatic import adding/removal
 let g:go_imports_autosave = 0
 
+" Spelling
+autocmd FileType markdown setlocal spell
+autocmd FileType latex setlocal spell
+set spelllang=en_gb,fr_fr
+:inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 lua << END
 -- Start git setup in status bbar
 require('gitsigns').setup()
