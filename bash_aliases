@@ -1,4 +1,5 @@
-export BROWSER='/usr/bin/chromium'
+export BROWSER='/usr/bin/firefox'
+export XAUTHORITY='/home/proullon/.Xauthority'
 export XTERM='/bin/bash'
 export EDITOR='/usr/bin/vim'
 
