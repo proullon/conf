@@ -74,6 +74,8 @@ call plug#begin("~/.vim/plugged")
  " Icons
  Plug 'kyazdani42/nvim-web-devicons'
  Plug 'ryanoasis/vim-devicons'
+ " vimtex plugin for latex
+ Plug 'lervag/vimtex'
 call plug#end()
 
 " Nightfox colorschemes
@@ -85,9 +87,9 @@ colorscheme duskfox
 map gv :<C-U>call go#def#JumpMode("vsplit")<CR>
 map gi :<C-U>call go#cmd#Install(!g:go_jump_to_error)<CR>
 
-:" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
-:inoremap <C-a> <Home>
-:inoremap <C-e> <End>
+" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
 
 " SublimeText ctrl-p shortcut
 let g:ctrlp_map = '<c-p>'
@@ -99,8 +101,15 @@ let g:go_imports_autosave = 0
 " Spelling
 autocmd FileType markdown setlocal spell
 autocmd FileType latex setlocal spell
-set spelllang=en_gb,fr_fr
-:inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+set spelllang=en_gb,fr
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+" Vimtex config
+" let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 lua << END
 -- Start git setup in status bbar
@@ -111,4 +120,3 @@ require('feline').setup({
     preset = 'noicon'
 })
 END
-
