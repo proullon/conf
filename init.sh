@@ -7,6 +7,8 @@ cd
 ln -s $old/bashrc .bashrc
 ln -s $old/bash_aliases .bash_aliases
 ln -s $old/bash_profile .bash_profile
+# Nushell
+ln -s $old/nushell .config/.
 # Git
 ln -s $old/git-prompt.sh .git-prompt.sh
 ln -s $old/gitconfig .gitconfig

@@ -1,5 +1,5 @@
 
-# bash profile should be supler simple and juste load .profile and .bashrc (in that order)
+# bash profile should be super simple and just load .profile and .bashrc (in that order)
 
 
 # Loading profile, not call since bash_profile is here
