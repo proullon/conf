@@ -1,0 +1,1373 @@
+k
+ls
+rm nu-0.64.0-x86_64-unknown-linux-gnu.tar.gz
+ls
+mv nu ~/work/bin/.
+ls
+cat README.md
+cat config.toml
+ls
+cd
+ls
+cat mc.password
+fetch 
+cd work/src/git.bliink.io/ad-serving/delivery/druid/sql/
+ls
+cat ad-event.spec.json.tmpl
+fetch ad-event.spec.json.tmpl
+(fetch https://api.chucknorris.io/jokes/random).value
+(fetch https://api.chucknorris.io/jokes/random)
+curl https://api.chucknorris.io/jokes/random
+(fetch https://api.chucknorris.io/jokes/random)
+ls
+cd .
+cd ..
+ls
+cat README.md
+ls
+cat watchdog/main.go
+cat watchdog/main.go | grep http
+ curl -X GET http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg
+fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig
+$env
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig
+env
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig.lateMessageRejectionStartDateTime
+ls
+pwd
+ls
+ls -l
+tls
+10 / 1
+10 / 2
+10 * 2
+git
+git log
+ls
+ls -a
+vim .config/nushell/config.nu
+ls -a 
+git
+lg
+git log
+ls
+curl -sS https://starship.rs/install.sh | sh
+mkdir ~/.cache/starship
+starship init nu | save ~/.cache/starship/init.nu
+source ~/.cache/startship/init.nu
+starship init nu | save ~/.cache/starship/init.nu
+source ~/.cache/startship/init.nu
+source ~/.cache/starship/init.nu
+ls
+cd ../
+ls
+cd events/
+pwd
+ls
+vim ~/.cache/starship/init.nu
+nvim ~/.cache/starship/init.nu
+ls
+cd
+ls
+ls -a
+cd .config/nushell/
+ls
+vim config.nu
+ls
+cd
+vim .config/nushell/config.nu
+vim .config/nushell/env.nu
+source ~/.cache/starship/init.nu 
+ls
+pwd
+git user
+cat .gitconfig
+ls
+pwd
+ls
+vim ~/.cache/starship/init.nu
+/usr/local/bin/starship prompt --continuation
+vim .config/nushell/config.nu
+vim ~/.config/nushell/config.nu
+vim ~/.config/nushell/env.nu
+vim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu
+ls
+ls -a
+ls
+vim $nu.configuration/path
+vim $nu.config-path
+vim $nu.env-path
+ls
+k get pods
+kubectl get pods
+kubectl get pods -f
+kubectl get pods --format
+kubectl --help get pods 
+kubectl --help 
+kubectl get pods 
+ls
+ls go
+ls go/pkg/
+ls
+cd work/src/github.com/proullon/graphene/
+ls
+make
+make package
+ls
+make test
+ls
+LS
+GD
+gd
+git diff
+vim $nu.env-path
+ls
+alias
+ls ~/.
+ls -la ~/.
+source ~/.bash_alias
+source ~/.bash_alias_local
+ls -la ~/.
+ls -la ~/. | grep bash
+source ~/.bash_aliases
+source ~/.bash_aliases_local
+crdb
+ls
+vim ~/.config/nushell/alias.nu
+nvim ~/.config/nushell/alias.nu
+nvim ~/.config/nushell/config.nu
+ls
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/env.nu
+ls
+nvim ~/.config/nushell/env.nu
+ls
+pwd
+ls
+ok
+ls
+cat mc.password
+pwd
+ls
+pwd
+ls
+pwd
+ls
+cd work/src/github.com/proullon/ramsql/cli/
+cd ..
+ls
+make
+make test
+go test -v ./...
+ls
+go test -v ./...
+go
+go version
+pwd
+go install ./...
+pwd
+go install ./...
+ls
+cat lol
+rm lol
+ls
+cat toto
+rm toto
+ls
+cat bench_test.go
+ls
+pwd
+ls
+go test ./...
+ls
+pwd
+ls
+go env
+ls
+go install ./...
+go env
+go env > goenvdev
+ls
+go env > goenvdev
+ls
+cat ~/goenvbash
+go env
+ld
+ls
+go env >> goenvdev
+ls
+go build .
+ls
+rm ramsql
+go install .
+ls
+go test .
+go test ./...
+go test .
+ls
+cd ../graphene/
+ls
+make test
+ls
+alias
+show alias
+ls
+cd ../ramsql/
+ls
+cp ../graphene/Makefile .
+nvim Makefile
+make test
+ls
+cd ../graphene/
+vim ~/.poshthemes/ys.omp.json
+oh-my-posh font install
+oh-my-posh font --help
+ls
+cd
+ls
+ls -a
+ls .fonts
+ls .poshthemes/
+ls .fonts
+ls -a
+sudo apt install fonts-monoid
+ls
+vim ~/.poshthemes/ys.omp.json
+nvim ~/.config/nushell/config.nu
+ls
+kubectl get pods
+k get pods
+kubectl get pods
+ls
+kubectl get service
+ls
+ls
+kubectl get service
+ls
+mv rtb-event-inventory-rollup.spec.json rtb-event-inventory-rollup.spec.json.tmpl
+ls
+fg
+ls
+cat README.md
+vim README.md
+vim config.toml
+vim README.md
+vim config.toml
+cat README.md
+hugo server -D --bind 0.0.0.0
+ls
+vim config.toml
+kubectl get service
+clear;kubectl get service
+tls
+tmux 
+tmux list-session
+tmux attach dev
+tmux attach-session dev
+tmux attach-session -t dev
+ls
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+fg
+nvim ~/.config/nushell/config.nu
+ls
+cat mc.password
+ls
+tls
+source ~/.config/nushell/config.nu 
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+tls
+tmux list-session
+tmux -2 list-session
+tls
+source ~/.config/nushell/config.nu 
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+ls
+tls
+pwd
+ls
+tls
+nvim config.toml
+ta dev
+ls
+nvim ~/.config/nushell/config.nu
+source ~/.config/nushell/config.nu 
+ls
+tls
+tn dev
+ls
+chsh
+ls
+vim conf
+fg
+v
+ls
+cat README.md
+df -h
+pwd
+ls
+cd ad-serving/delivery/druid/
+ls
+ curl -X GET http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig.lateMessageRejectionStartDateTime
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg)
+(fetch http://34.79.147.51/druid/indexer/v1/supervisor/ad-event-campaign-rollup-stg).ioConfig.lateMessageRejectionStartDateTime
+make
+ls
+make package
+fg
+make package
+ls
+la
+ls -a
+cat .bucket
+rm .bucket
+ls
+ls -a
+rm ad-event-dev.spec.json
+rm ad-event-campaign-rollup-dev.spec.json
+ls
+fg
+ls
+cd work/src/github.com/proullon/blog/
+ls
+cd work/src/github.com/proullon/blog/
+ls
+cd ad-serving/delivery/druid/
+ls
+v
+cd -
+ls
+cd go/messaging/
+ls
+cd ../../../go/messaging/
+ls
+v
+fg
+v
+make
+gp
+lg
+git checkout -b develop
+ls
+git add -p
+git commit -m "feat: (kafka) aggregate errors over 1min before logging"
+gt
+make install
+git add -p
+git commit -m "feat: (kafka) allow publication of only given % of message"
+lg
+git push origin develop
+gosec
+gosec ./...
+cat .gitlab-ci.yml
+gosec ./...
+fg
+curl -I -X GET  https://raw.githubusercontent.com/securego/gosec/v2.12.0/install.sh
+gd
+git add -p
+git commit -m "ci: upgrade gosec"
+git push origin develop
+lg
+fg
+ls
+cd go/messaging/
+ls
+v
+cd go/messaging/
+v
+git add -p
+git commit --amend
+git push -f origin develop
+ls
+gosec --help
+gosec --excluse G404
+gosec --exclude G404
+gosec --exclude G404 ./...
+vim
+gt
+git add -p
+git commit -m "fix: (gosec) exclude weak random generator warning since I want a weak random generator"
+git push origin develop
+make test
+ls
+gp
+git brand --set-upstream-to=origin/develop develop
+git branch --set-upstream-to=origin/develop develop
+gp
+gm
+gp
+lg
+git tag v1.1.5
+git push --tag
+bash
+ls
+cd ../
+ls
+cd events/
+ls
+gp
+git branch --set-upstream-to=origin/develop develop
+gp
+ls
+lg
+ls
+cd ../../.
+ls
+cd ad-serving/
+ls
+cd ../
+ls
+tree
+ls -R
+ls -lR
+ls -lR .
+ls
+cd ad-serving/
+ls
+cd delivery/
+ls
+cd events
+ls
+gm
+gp
+git checkout develop
+gp
+lg
+;s
+ls
+git branch
+git branch -d fix/kafka-brokers
+git branch -d proullon/fix
+gp
+lg
+ls
+make install
+cat Makefile
+make build
+ls
+gt
+v
+fg
+v
+ls
+/bin/bash
+ls
+cd work/src/github.com/proullon/
+ls
+cd sorbonne/
+ls
+v
+fg
+go run .
+fg
+v
+go run .
+fg
+v
+go run .
+nvim main.go
+ls
+cd ../../
+ls
+mkdir caddyserver
+cd caddyserver/
+git clone "https://github.com/caddyserver/caddy.git"
+cd caddy/
+ls
+make
+cd cmd/caddy/
+ls
+go build
+go install .
+cd ../../../
+caddy
+docker images
+docker system prune -f
+docker images
+docker rmi gcr.io/distroless/static
+docker rmi gcr.io/distroless/static:nonroot
+docker rmi eu.gcr.io/bliink-190908/devops/docker/docker-golang:1.16.4
+docker rmi eu.gcr.io/bliink-190908/devops/docker/docker-golang:1.16.5
+docker rmi apache/druid:0.22.1
+docker system prune -f
+ls
+sudo su
+cd ../proullon/sorbonne/
+ls
+go run .
+go run . > /var/www/sorbonne
+/bin/sh
+/bin/bash
+ls
+sudo su
+ls
+cd work/src/github.com/proullon/sorbonne/
+ls
+fg
+v
+go run .
+fg
+nvim main.go
+go run .
+go run . > MA260.csv
+ls
+bash
+ls
+cat MA260.csv | wc -l
+ls
+graphctl 
+graphctl import
+graphctl import MA260.csv
+nvim main.go
+bash
+ssagf 
+ls
+ps aux
+bash
+ls
+graphctl import MA220.csv
+bash
+ls
+cd work/src/github.com/proullon/sorbonne/
+nvim MA220.csv
+graphctl import MA220.csv
+ls
+mkdir definitions
+cd definitions/
+ls
+git clone git@git.bliink.io:definitions/exchange.git
+cd exchange/
+ls
+lg
+git tag
+lg
+git tag v1.1.94
+git tag 1.1.94
+git push --tag
+git push --help
+git push --tags
+ls
+ls ~/
+sudo mv ~/script.pdf /var/www/.
+sudo rm /var/www/script.pdf
+sudo rm /var/www/sorbonne
+ls
+pwd
+cd
+ls
+cat README.md
+ls go/
+ls go/pkg/mod/
+ls
+rm -rf go
+ls -l
+ls
+rm -rf go
+ls -lR go
+ls -lR ./go
+ls -lr ./go
+ls --help
+lls
+ls
+ls -l go
+ls -l go/pkg/
+ls
+pwd
+ssagf 
+ls
+ssb
+v
+ls
+ccd ../../
+cd ../../
+ls
+mkdir nushell
+cd nushell/
+git clone git@github.com:nushell/nushell.git
+cd nushell/
+ls
+cat install-all.sh
+./install-all.sh
+cargo
+curl https://sh.rustup.rs -sSf | sh
+ps 
+ps | grep graphctl
+kill -9 87879
+kill -9 89146
+ps | grep graphctl
+ps 
+ls
+./install-all.sh
+cargo
+cat ~/.cargo/env
+nu
+ls
+l
+ls
+cd work/src/github.com/nushell/nushell/
+ls
+./install-all.sh
+cd work/src/github.com/proullon/sorbonne/
+ls
+ls
+cd work/src/github.com/proullon/druid/
+ls
+cat test.sh
+./test.shh
+./test.sh
+fg
+./test.sh
+fg
+cat test.sh
+cat test.sql | druidsql
+cat test.sql | druidql
+cd ../github.com/proullon/druid/
+vim test.sh
+./test.sh
+cat test.sh
+vim test.sh
+./test.sh
+vim README.md
+bash
+ls
+cd ../../
+ls
+cd ../git.bliink.io/
+ls
+cd ad-serving/delivery/events/
+ls
+gp
+git checkout master
+gp
+git fetch --akk
+git fetch --all
+lg
+git fetch feature/kafka-async-implementation
+git fetch origin feature/kafka-async-implementation
+git fetch origin
+lg
+git branch
+ls
+pwd
+ls
+cat test.yml
+ls
+git fetch origin feature/kafka-async-implementation
+bash
+ls
+git fetch --all
+git branch -d
+git branch -r
+git checkout feature/kafka-async-implementation
+ls
+lg
+git rebase develop
+lg
+gt
+fg
+ls
+cd ad-serving/delivery/events/
+ls
+gt
+v
+make build
+lg
+gt
+git add go.mod
+git add go.sum
+gt
+git rebase --continue
+gt
+fg
+v
+make build
+go mod download github.com/googleapis/enterprise-certificate-proxy
+make build
+gt
+git add go.mod
+git add go.sum
+git rebase --continue
+gt
+lg
+git push origin feature/kafka-async-implementation
+git push 0f origin feature/kafka-async-implementation
+git push -f origin feature/kafka-async-implementation
+git checkout develop
+gg "Publish("
+gg "PublishAsync"
+ls
+pwd
+ls
+v
+ssb
+gp
+git checkout bugfix/cannot-activate-kafka
+ls
+v
+git checkout develop
+ls
+which nu
+ls /usr/bin/nu
+uname -a
+cd /tmp; wget https://github.com/nushell/nushell/releases/download/0.65.0/nu-0.65.0-x86_64-unknown-linux-gnu.tar.gz 
+ls
+tar -xf nu-0.65.0-x86_64-unknown-linux-gnu.tar.gz
+ls
+nu --version
+./nu --version
+bash
+sudo mv nu /usr/bin/nu-0-65-0
+sudo cp /usr/bin/nu /usr/bin/nu-0-64-0
+sudo su
+fg
+./nu
+./nu
+ls
+nu --version 
+ls
+cd ad-serving/delivery/druid/
+ls
+ls sql/
+ls
+vim sql/
+ls
+cd sql/
+sudo cp ad-event.spec.json.tmpl /var/www/.
+sudo cp ad-event-inventory-rollup.spec.json /var/www/.
+fg
+v
+sudo rm /var/www/ad-event-inventory-rollup.spec.json
+sudo rm /var/www/ad-event.spec.json.tmpl
+ls
+mv ad-event-inventory-rollup.spec.json ad-event-inventory-rollup.spec.json.tmpl
+vim ad-event-inventory-rollup.spec.json.tmpl
+gt
+cd ..
+make package
+ls
+ssagf 
+ls
+cd ../graphene/
+ls
+make deploy
+ls
+cd work/src/github.com/proullon/graphene/
+vim Makefile
+make deploy
+ssagf 
+vim Makefile
+ssagf 
+make deploy
+vim Makefile
+make deploy
+man ssh
+vim Makefile
+make deploy
+fg
+cat Makefile
+ssagf 
+make deploy
+vim Makefile
+cd ../
+ls
+cd ../
+ls
+cd manage/statistics/
+ls
+gp
+lg
+tree
+ls -lR
+ls
+ls tests/
+cd tests/functionals/
+ls
+ls rapports/
+ls
+ls ..
+cd ..
+ls
+cd ..
+ls
+ls cmd/statistics/main.go
+ls
+cd tests/functionals/
+ls
+mkdir campaign
+ls
+touch README.md
+touch Makefile
+ls
+touch main.go
+ls
+vim Makefile
+v
+ls
+git blame rapports
+git blame .
+git blame 
+git blame rapports/get_visibility_by_tag_rapport.md
+fg
+ls
+ls rapports/
+ls rules/
+touch campaign/campaign_dashboard_report.md 
+touch campaign/campaign_dashboard_report.go
+fg
+ls
+v
+ls
+make
+make test-staging
+ls
+make
+ls
+make build
+go build -o fctest
+pwd
+go build -o fctest
+watch 'go build -o fctest'
+watch --help
+watch . 'go build -o fctest'
+watch . {go build -o fctest}
+go build -o fctest
+cat main.go
+:q
+ls
+cd work/src/github.com/proullon/conf/
+ls
+cd work/src/github.com/proullon/conf/
+ls
+vim neovim
+ls
+make build
+go get git.bliink.io/ad-serving/manage/statistics/tests/functionnals/campaign
+pwd
+make build
+ls
+:wqa
+./fctest
+make build
+./fctest
+make build
+./fctest
+v
+git checkout feat/functionnal-test
+git checkout -b feat/functionnal-test
+lg
+gt
+git add Makefile
+git add README.md
+gt
+git add campaign/campaign_dashboard_report.go
+git add campaign/campaign_dashboard_report.md
+gt
+git add main.go
+gt
+git commit -m "feat: add functionnal tests squeleton"
+git push origin feat/functionnal-test
+gp
+git branch --set-upstream-to=origin/feat/functionnal-test
+gp
+ls
+make
+make deploy
+ls
+cd work/src/github.com/proullon/ramsql/
+ls
+make test
+sudo su
+make test
+make deploy
+ls
+pwd
+ ls
+ls
+cd work/src/github.com/proullon/sorbonne/
+ls
+v
+ls
+fg
+go run .
+bash
+v
+ls
+cd work/src/github.com/proullon/sorbonne/
+ls
+cd ~/work/ops/
+ls
+cd crdb/
+ls
+cat export.sh
+./export.sh
+ls graphene/
+graphctl import MA226.csv
+graphctl planning
+cd ../../
+ls
+cd ../../
+ls
+cd ../
+ls
+cd go/messaging/
+ls
+gp
+git checkout develop
+gp
+lg
+git rebase master
+lg
+fg
+ls
+make
+cd go/messaging/
+ls
+make
+v
+ls
+cd ../
+ls
+cd events/
+cd ../events/
+fg
+make test
+ls
+cd ad-serving/
+ls
+cd delivery/events/
+ls
+cat go.mod | grep events
+cat go.mod | grep event
+ls
+pwd
+ls
+v
+gg MakeDataModel
+gg MakeDataModelFrom
+fg
+v
+gg MakeDataModel
+v
+gg makeDataModel
+ls
+v
+gg SendMessage
+crdb sql -d graphene
+v
+gg "net/context"
+cd ../../ad-serving/delivery/events/
+gg "net/context"
+ls
+cd ../blog/
+ls
+gt
+lg
+git add .
+gt
+git commit -m "feat: add new hugo site"
+git push origin master
+ls
+hugo
+hugo --help
+hugo gen
+hugo new
+ls
+ls content/posts/first-post.md
+ls
+ls content/
+ls content/post/
+ls content/posts/
+cat content/posts/first-post.md
+ls
+vim config.toml
+cd content/
+ls
+mv posts/
+rm -rf posts
+ls
+cd ..
+hugo new content/post/futur-de-ramsql.md
+fg
+hugo new content/post/first-post.md
+ls
+git checkout feat/bnf
+git checkout -b feat/bnf
+ls
+wget https://ronsavage.github.io/SQL/sql-2003-2.bnf
+ls
+cd ../../
+ls
+mkdir goccmack
+cd goccmack/
+git clone git@github.com:goccmack/gocc.git
+cd gocc/
+ls
+go install .
+gocc 
+cd -
+cd ../proullon/ramsql/
+ls
+gocc sql-2003-2.bnf
+vim sql-2003-2.bnf
+gocc sql-2003-2.bnf
+ls
+cat sql-2003-2.bnf
+ls
+fg
+cd work/src/github.com/proullon/ramsql/
+ls
+cd ../../manage/ls
+cd ../../
+s
+ls
+cd exchange/
+ls
+gp
+lg
+ls
+make
+cat Makefile
+go install ./...
+ls
+cat Makefile
+ls
+docker build -t test .
+ls
+cat Dockerfile
+diff Dockerfile ../exchange/Dockerfile
+vim Dockerfile
+vim Dockerfile
+ls
+docker build -t test .
+ls
+gocc sql.bnf
+ls
+gocc sql.bnf
+v
+git checkout -b fix/62
+ls
+fg
+make test
+ls
+gd
+gt
+rm -rf errors/ lexer/ parser/ sql-2003-2.bnf sql.bnf
+ls
+make test
+hugo new content/post/first-post.md
+make test
+fg
+vim Dockerfile
+docker build -t test .
+docker run -it test:latest
+docker run -it test:latest server
+gd
+fg
+vim Dockerfile
+ls
+v
+gp
+lg
+gp
+git add -p
+gt
+git commit -m "fix: (docker) use static ldflags to have static binary AND cgo"
+git push origin develop
+make test
+make  test
+go test -v -name TestUpdateWithQu
+go test -v -name TestUpdateWithQu ./...
+go test -v -run TestUpdateWithQu ./...
+go test -v -run TestUpdateWithQu ./engine/parser/...
+clear; go test -v -run TestUpdateWithQu ./engine/parser/...
+make test
+git add -p
+git commit -m 'fix (close #62): parse quoted "table"."column"'
+git push origin fix/62
+ls
+cd
+ls
+ls go
+ls go/pkg/
+ls
+rm -rf go
+ls -l
+sudo rm -rf go
+ls
+mkdir images
+cd images/
+mkdir remarkable
+ls
+cd remarkable/
+mv ~/remarkable* .
+ls
+cat remarkable.txt
+sudo su
+ls
+cd ../
+ls
+cd delivery/druid/
+ls
+mkdir migration
+cd migration/
+touch main.go
+vim main.go
+ls
+go mod init
+go mod tidy
+go install ./...
+ls
+migration 
+fg
+mv ~/mongo .
+ls
+go build -o mig .
+clear; go build -o mig . && ./mig
+clear; go build -o mig . ; ./mig
+./mig
+v
+vim ~/mongo
+docker ps
+docker images
+docker rmi test:latest
+docker system prune -f
+v
+ls
+ifconfig 
+ls
+gp
+git branch
+git fetch origin
+git fetch --all
+git branch
+cd ../../
+ls
+cd ../
+ls
+cd manage/statistics/
+gp
+lg
+vim .gitlab-ci.yml
+ls
+cat coverage.out
+cat coverage.out | grep function
+ls
+ls tests/
+ls tests/functionals/
+fg
+vim .gitlab-ci.yml
+gt
+gp
+git add -p
+git commit -m "fix: (gitlab-ci) remove functionnal test from coverage"
+git push origin feat/functionnal-test
+ls
+vim .gitlab-ci.yml
+git add -p
+git commit -m "fix: (gitlab-ci) fix coverage sed"
+git push origin feat/functionnal-test
+vim /etc/hosts
+sudo vim /etc/hosts
+telnet statistics-stg-
+cat /etc/hosts
+telnet statistics-grpc-stg.api.bliink.io 80
+telnet statistics-stg.api.bliink.io 80
+sudo vim /etc/hosts
+telnet statistics-stg.api.bliink.io 80
+cat /etc/hosts
+telnet statistics-stg.api.bliink.io 80
+telnet statistics-grpc-stg.api.bliink.io 80
+ls
+gp
+lg
+make deploy
+crdb sql -d graphene
+vim main.go
+cd ../
+ls
+cd ../
+ls
+cd manage/
+git clone git@git.bliink.io:ad-serving/manage/gateway.git
+cd gateway/
+ls
+v
+gg 
+gg "statistics"
+gg "statistics-"
+telnet statistics-grpc-stg.api.bliink.io 80
+telnet statistics-stg.api.bliink.io 80
+telnet statistics.api.bliink.io 80
+telnet statistics-prd.api.bliink.io 80
+telnet statistics.api.bliink.io 80
+ls
+fg
+v
+make
+ls
+cd tests/
+ls
+cd functionals/
+ls
+make
+ls
+cat Makefile
+make
+gp
+git stash
+gp
+git stash pop
+v
+gt
+git add helpers/env.go
+gt
+lg
+ls
+make
+gt
+ls
+cat Makefile
+make test-staging
+vim helpers/env.go
+make build
+make test-staging
+fg
+ls
+ks
+fg
+ls
+make
+make test-staging
+ls
+gg "90"
+fg
+v
+ls
+v
+telnet statistics.api.bliink.io 80
+telnet statistics-stg.api.bliink.io 80
+make
+telnet statistics-stg.api.bliink.io 80
+make test-staging
+make
+make test-staging
+make
+make test-staging
+make
+make test-staging
+make
+make test-staging
+make build test-staging
+make build test-dev
+make build test-development
+make build test-dev
+make build test-staging
+gt
+git add -p
+git commit -m "fix: panic on invalid flag"
+git push origin feat/functionnal-test
+make build test-staging
+git add -p
+git commit -m "feat: (integration) better dates and better errors"
+git push origin feat/functionnal-test
+ls
+make test-stageing
+make test-staging
+v
+gt
+rm fctest
+ls
+crdb sql -d graphene
+ls
+cd
+ls
+mv *.pdf /var/www/books/.
+sudo mv *.pdf /var/www/books/.
+ls
+vim passwords.txt
+ls
+cat mc.password
+rm mc.password
+ls
+cat passwords.txt
+ls
+cd work/src/github.com/proullon/conf/
+ls
+lg
+gt
+ls
+cat init.sh
+nvim init.vim
+hugodev
+fg
+ls
+mkdir functional
+cd functional/
+touch Makefile
+touch main.go
+mkdir adevent
+mkdir cookiematch
+mkdir dashboard
+ls
+ls -l
+ls -lR
+ls -l
+ls
+bash
+ls
+pwd
+ls
+tls
+ls
+dpkg --print-foreign-architectures
+sudo dpkg --add-architecture i386 ; sudo apt update
+sudo apt-get install steam
+sudo apt-get install keepass2
+htop
+cat ~/passwords.txt
+htop
+ls
+ccd
+cd
+ls
+vim README.md
+/usr/bin/vim README.md
+ls
+sudo su
+vim ~/passwords.txt
+pwgen -s 12
+fg
+vim ~/passwords.txt
+ssminecraft 
+fg
+ls
+term size 
+term size -c
+term size --help
+term size.columns
+term size --help
+(term size).columns
+nvim ~/.config/nushell/env.nu
+source ~/.config/nushell/env.nu
+ls
+cd work/src/github.com/proullon/conf/
+ls
+gt
+gp
+gt
+git add -p
+gt
