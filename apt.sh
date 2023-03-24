@@ -2,7 +2,7 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install curl htop cmake gettext latexmk
+sudo apt-get install libssl-dev pkg-config curl htop cmake gettext latexmk
 # python
 sudo apt-get install python3 python3-pip
 python3 -m pip install --user --upgrade pynvim

@@ -257,6 +257,7 @@ let base16_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
+  show_banner: false,
   filesize_metric: false
   table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
@@ -282,19 +283,19 @@ let-env config = {
   case_sensitive_completions: false # set to true to enable case-sensitive completions
   enable_external_completion: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
 
-  hooks: {
-    pre_prompt: [{
-      $nothing  # replace with source code to run before the prompt is shown
-    }]
-    pre_execution: [{
-      $nothing  # replace with source code to run before the repl input is run
-    }]
-    env_change: {
-      PWD: [{|before, after|
-        $nothing  # replace with source code to run if the PWD environment is different since the last repl input
-      }]
-    }
-  }
+#  hooks: {
+#    pre_prompt: [{
+#      $nothing  # replace with source code to run before the prompt is shown
+#    }]
+#    pre_execution: [{
+#      $nothing  # replace with source code to run before the repl input is run
+#    }]
+#    env_change: {
+#      PWD: [{|before, after|
+#        $nothing  # replace with source code to run if the PWD environment is different since the last repl input
+#      }]
+#    }
+#  }
   menus: [
       # Configuration for default nushell menus
       # Note the lack of souce parameter
