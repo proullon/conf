@@ -490,6 +490,7 @@ let-env config = {
 # add Go
 let-env PATH = ($env.PATH | append "/usr/local/go/bin")
 let-env PATH = ($env.PATH | append "/home/proullon/go/bin")
+let-env EDITOR = "nvim"
 
 # editor alias
 alias vim = nvim
