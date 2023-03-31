@@ -2,7 +2,8 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install libssl-dev pkg-config curl htop cmake gettext latexmk
+# latex
+sudo apt-get install libssl-dev pkg-config curl htop cmake gettext latexmk texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 # python
 sudo apt-get install python3 python3-pip
 python3 -m pip install --user --upgrade pynvim

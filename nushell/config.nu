@@ -258,6 +258,7 @@ let base16_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   show_banner: false,
+  edit_mode: nvim,
   filesize_metric: false
   table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
@@ -488,9 +489,10 @@ let-env config = {
 
 # add Go
 let-env PATH = ($env.PATH | append "/usr/local/go/bin")
+let-env PATH = ($env.PATH | append "/home/proullon/go/bin")
 
 # editor alias
-alias vim = term=screen-256color nvim
+alias vim = nvim
 alias bim = nvim
 alias v = nvim -c "nerdtree" .
 
