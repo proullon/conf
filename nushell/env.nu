@@ -31,12 +31,12 @@ def create_right_prompt [] {
 # Note: The conversions happen *after* config.nu is loaded
 let-env ENV_CONVERSIONS = {
   "PATH": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | path expand | str collect (char esep) }
+    from_string: { |s| $s | split row '-' }
+    to_string: { |v| $v | path expand | str join '-' }
   }
   "Path": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | path expand | str collect (char esep) }
+    from_string: { |s| $s | split row '-' }
+    to_string: { |v| $v | path expand | str join '-' }
   }
 }
 
@@ -57,24 +57,7 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
+let-env EDITOR = "nvim"
 
 ################# Test oh-my-posh config
-#
-let-env POWERLINE_COMMAND = 'oh-my-posh'
-let-env POSH_THEME = '/home/proullon/.poshthemes/ys.omp.json'
-let-env PROMPT_INDICATOR = ""
-# By default displays the right prompt on the first line
-# making it annoying when you have a multiline prompt
-# making the behavior different compared to other shells
-let-env PROMPT_COMMAND_RIGHT = {||''}
-let-env NU_VERSION = (version | get version)
-
-# PROMPTS
-let-env PROMPT_MULTILINE_INDICATOR = (^'/usr/local/bin/oh-my-posh' print secondary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.NU_VERSION)")
-
-let-env PROMPT_COMMAND = {||
-    let width = (term size | get columns | into string)
-    ^'/usr/local/bin/oh-my-posh' print primary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.NU_VERSION)" $"--execution-time=($env.CMD_DURATION_MS)" $"--error=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)"
-}
-
-let-env EDITOR = "nvim"
+#oh-my-posh init nu
