@@ -340,4 +340,9 @@ let light_theme = {
   ]
 }
 
+export-env {
+  let-env EDITOR = "nvim"
+}
+
+source alias.nu
 source ~/.oh-my-posh.nu

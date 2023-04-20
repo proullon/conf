@@ -57,7 +57,6 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-let-env EDITOR = "nvim"
 
 ################# Test oh-my-posh config
 #oh-my-posh init nu
