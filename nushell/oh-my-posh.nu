@@ -1,6 +1,6 @@
 export-env {
     let-env POWERLINE_COMMAND = 'oh-my-posh'
-    let-env POSH_THEME = '/Users/proullon/.poshthemes/ys.omp.json'
+    let-env POSH_THEME = '~/.poshthemes/ys.omp.json'
     let-env PROMPT_INDICATOR = ""
     let-env POSH_PID = (random uuid)
     # By default displays the right prompt on the first line
