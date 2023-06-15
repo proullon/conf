@@ -340,6 +340,10 @@ let light_theme = {
   ]
 }
 
+let-env config = {
+  show_banner: false,
+}
+
 export-env {
   let-env EDITOR = "nvim"
 }

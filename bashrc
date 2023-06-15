@@ -114,3 +114,4 @@ fi
 alias k=kubectl
 complete -F __start_kubectl k
 . "$HOME/.cargo/env"
+export GPG_TTY=$(tty)

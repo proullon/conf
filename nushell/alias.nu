@@ -24,7 +24,7 @@ alias gd = git diff
 alias gg = git grep -n
 alias gp = git pull --prune
 alias gc = git checkout
-alias gm = git checkout master
+alias gm = git checkout main
 alias br = git branch
 alias perm = stat -c %a %a %n
 
