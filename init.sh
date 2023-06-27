@@ -23,6 +23,7 @@ mkdir -p .config/nvim
 ln -s $old/init.vim .config/nvim/init.vim
 
 # tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s $old/tmux.conf .tmux.conf
 ln -s $old/tmux.conf.local .tmux.conf.local
 
