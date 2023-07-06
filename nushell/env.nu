@@ -59,5 +59,9 @@ let-env NU_PLUGIN_DIRS = [
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/usr/bin')
 let-env GPG_TTY = (echo (tty))
 
+let-env TERM = xterm-256color
+let-env EDITOR = nvim
+let-env VISUAL = nvim
+
 ################# Test oh-my-posh config
 #oh-my-posh init nu
