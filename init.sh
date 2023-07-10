@@ -29,3 +29,6 @@ ln -s $old/tmux.conf.local .tmux.conf.local
 
 # alacritty
 ln -s $old/alacritty ~/.config/alacritty
+
+# zathura
+ln -s $old/zathura ~/.config/zathura

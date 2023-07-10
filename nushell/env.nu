@@ -63,5 +63,7 @@ let-env TERM = xterm-256color
 let-env EDITOR = nvim
 let-env VISUAL = nvim
 
+let-env NVIM_LISTEN_ADDRESS = /tmp/nvimsocket
+
 ################# Test oh-my-posh config
 #oh-my-posh init nu

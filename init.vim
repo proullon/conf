@@ -113,8 +113,9 @@ set spelllang=en_gb,fr
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Vimtex config
-" let g:tex_flavor='latex'
+let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
+let g:vimtex_view_general_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
