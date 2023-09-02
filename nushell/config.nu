@@ -340,7 +340,7 @@ let light_theme = {
   ]
 }
 
-let-env config = {
+$env.config = {
   show_banner: false,
 }
 
