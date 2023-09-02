@@ -77,6 +77,10 @@ call plug#begin("~/.vim/plugged")
  Plug 'ryanoasis/vim-devicons'
  " vimtex plugin for latex
  Plug 'lervag/vimtex'
+ " dart
+ Plug 'dart-lang/dart-vim-plugin'
+ " flutter
+ Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 " Nightfox colorschemes

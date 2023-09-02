@@ -65,7 +65,12 @@ $env.VISUAL = nvim
 
 $env.NVIM_LISTEN_ADDRESS = /tmp/nvimsocket
 $env.PATH = ($env.PATH | append ':/home/proullon/work/flutter/bin')
+$env.PATH = ($env.PATH | append ':/home/proullon/work/android-studio/bin')
+$env.PATH = ($env.PATH | append ':/home/proullon/work/cmdline-tools/bin')
+$env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/platform-tools')
+$env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/build-tools')
 $env.PATH = ($env.PATH | append ':/home/proullon/go/bin')
+$env.CHROME_EXECUTABLE = "/usr/bin/chromium"
 
 ################# Test oh-my-posh config
 #oh-my-posh init nu
