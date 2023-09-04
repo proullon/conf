@@ -32,3 +32,8 @@ ln -s $old/alacritty ~/.config/alacritty
 
 # zathura
 ln -s $old/zathura ~/.config/zathura
+
+# mpd
+ln -s $old/mpd ~/.config/mpd
+ln -s $old/pms ~/.config/pms
+ln -s $old/beets ~/.config/beets
