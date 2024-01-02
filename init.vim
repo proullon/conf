@@ -67,6 +67,8 @@ call plug#begin("~/.vim/plugged")
  Plug 'tpope/vim-fugitive'
  " Go
  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+ " rust
+ Plug 'rust-lang/rust.vim'
  " Git
  Plug 'lewis6991/gitsigns.nvim'
  " Status bar
@@ -80,7 +82,10 @@ call plug#begin("~/.vim/plugged")
  " dart
  Plug 'dart-lang/dart-vim-plugin'
  " flutter
- Plug 'thosakwe/vim-flutter'
+ Plug 'nvim-lua/plenary.nvim'
+ Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
+ Plug 'akinsho/flutter-tools.nvim'
+ " Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 " Nightfox colorschemes
@@ -125,6 +130,7 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 lua << END
+require("flutter-tools").setup {} -- use defaults
 -- Start git setup in status bbar
 require('gitsigns').setup()
 -- require('feline').setup()
