@@ -47,68 +47,43 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+" What do I want ?
+" - Colorscheme matching tmux, etc: nightfox with duskfox variation.
+" - Modern icons: vim-devicons and nvim-web-devicons
+" - LSP, DAP, linters and formatters for each language I use: mason
+" - Git integration: gitsigns, fugitive
+" - Status bar: feline
+" - Latex integration: vimtex
+" - File navitagion: Telescope
+"
+" any language specific plugin should go in favor of mason
 
 call plug#begin("~/.vim/plugged")
- " ????
- Plug 'SirVer/ultisnips'
- Plug 'honza/vim-snippets'
- Plug 'preservim/nerdcommenter'
- Plug 'mhinz/vim-startify'
- " Markdown preview
- Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
- " CtrlP my love
- Plug 'ctrlpvim/ctrlp.vim'
- " NERDTree
- Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
  " Theme
  Plug 'EdenEast/nightfox.nvim'
- " Git plugin
- Plug 'tpope/vim-fugitive'
- " Go
- Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
- " Git
- Plug 'lewis6991/gitsigns.nvim'
- " Status bar
- Plug 'feline-nvim/feline.nvim'
- "Plug 'nvim-lualine/lualine.nvim'
  " Icons
  Plug 'kyazdani42/nvim-web-devicons'
  Plug 'ryanoasis/vim-devicons'
+ " Mason
+ Plug 'williamboman/mason.nvim'
+ " Git
+ Plug 'tpope/vim-fugitive'
+ Plug 'lewis6991/gitsigns.nvim'
+ " Status bar
+ Plug 'feline-nvim/feline.nvim'
  " vimtex plugin for latex
  Plug 'lervag/vimtex'
- " dart
- Plug 'dart-lang/dart-vim-plugin'
- " flutter
- Plug 'thosakwe/vim-flutter'
+ " Telescope
+ Plug 'nvim-lua/plenary.nvim'
+ Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 " Nightfox colorschemes
 colorscheme duskfox
-"colorscheme nightfox
-"colorscheme nordfox
-
-" I want :GoDef on gv and :GoInstall on gi
-map gv :<C-U>call go#def#JumpMode("vsplit")<CR>
-map gi :<C-U>call go#cmd#Install(!g:go_jump_to_error)<CR>
 
 " Map Ctrl-A -> Start of line, Ctrl-E -> End of line
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-
-" SublimeText ctrl-p shortcut
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-" Disable vim-go automatic import adding/removal
-let g:go_imports_autosave = 0
-
-" Start NERDTree when Vim starts with a directory argument.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Spelling
 autocmd FileType markdown setlocal spell
@@ -127,9 +102,39 @@ let g:tex_conceal='abdmg'
 lua << END
 -- Start git setup in status bbar
 require('gitsigns').setup()
--- require('feline').setup()
 -- Start status bar
 require('feline').setup({
     preset = 'noicon'
 })
+require('mason').setup()
+require('telescope').setup{
+  defaults = {
+    -- Default configuration for telescope goes here:
+    -- config_key = value,
+    mappings = {
+      i = {
+        -- map actions.which_key to <C-h> (default: <C-/>)
+        -- actions.which_key shows the mappings for your picker,
+        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+        ["<C-h>"] = "which_key"
+      }
+    }
+  },
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+  },
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
+  }
+}
 END
