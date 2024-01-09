@@ -82,6 +82,9 @@ call plug#begin("~/.vim/plugged")
  " Telescope
  Plug 'nvim-lua/plenary.nvim'
  Plug 'nvim-telescope/telescope.nvim'
+ " Flutter
+ Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
+ Plug 'akinsho/flutter-tools.nvim'
 call plug#end()
 
 " Nightfox colorschemes
@@ -126,7 +129,7 @@ local lspconfig = require('lspconfig')
 
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pylsp', 'gopls' }
+local servers = { 'rust_analyzer', 'pylsp', 'gopls', 'golangci_lint_ls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -247,4 +250,6 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
+require("flutter-tools").setup {} -- use defaults
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 END
