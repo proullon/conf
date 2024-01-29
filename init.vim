@@ -87,6 +87,9 @@ call plug#begin("~/.vim/plugged")
  Plug 'akinsho/flutter-tools.nvim'
  " Obsidian
  Plug 'epwalsh/obsidian.nvim'
+ " File explorer tree view
+ Plug 'MunifTanjim/nui.nvim'
+ Plug 'nvim-neo-tree/neo-tree.nvim'
 call plug#end()
 
 " Nightfox colorschemes
@@ -97,6 +100,7 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 " Map Ctrl-P to Telescope find_files in normal mode
 nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-o> <cmd>ObsidianQuickSwitch<cr>
 
 " Spelling
 autocmd FileType markdown setlocal spell
