@@ -1,0 +1,16 @@
+[Unit]
+Description=Hugo - Fast and Flexible Static Site Generator
+Documentation=man:hugo(1)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=4
+
+[Service]
+User=proullon
+ExecStart=/usr/bin/hugo server -D --bind 0.0.0.0 -b %H
+Restart=always
+RestartSec=10
+WorkingDirectory=/home/proullon/work/src/github.com/proullon/blog
+
+[Install]
+WantedBy=multi-user.target

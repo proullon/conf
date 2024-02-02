@@ -1,0 +1,16 @@
+[Unit]
+Description=IPFS
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=4
+
+[Service]
+User=proullon
+ExecStart=/usr/local/bin/ipfs daemon
+Restart=always
+RestartSec=10
+SuccessExitStatus=3 4
+RestartForceExitStatus=3 4
+
+[Install]
+WantedBy=multi-user.target

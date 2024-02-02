@@ -1,0 +1,16 @@
+[Unit]
+Description=Prometheus metrics SSH proxy
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+
+[Service]
+Restart=on-abnormal
+
+; User and group the process will run as.
+User=proullon
+Group=proullon
+
+ExecStart=/home/proullon/go/bin/promsshp
+
+[Install]
+WantedBy=multi-user.target
