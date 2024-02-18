@@ -37,3 +37,7 @@ ln -s $old/zathura ~/.config/zathura
 ln -s $old/mpd ~/.config/mpd
 ln -s $old/pms ~/.config/pms
 ln -s $old/beets ~/.config/beets
+
+# cmus
+ln -s $old/cmus/rc ~/.config/cmus/rc
+ln -s $old/cmus/rose-pine.theme ~/.config/cmus/rose-pine.theme
