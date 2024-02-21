@@ -41,3 +41,6 @@ ln -s $old/beets ~/.config/beets
 # cmus
 ln -s $old/cmus/rc ~/.config/cmus/rc
 ln -s $old/cmus/rose-pine.theme ~/.config/cmus/rose-pine.theme
+
+# kitty
+ln -s $old/kitty ~/.config/kitty
