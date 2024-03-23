@@ -3,6 +3,9 @@
 old=`pwd`
 cd
 
+# Xresources
+ln -s $old/.Xresources ~/.Xresources
+
 # Bash
 ln -s $old/bashrc .bashrc
 ln -s $old/bash_aliases .bash_aliases
@@ -16,6 +19,8 @@ ln -s $old/gitconfig .gitconfig
 ln -s $old/ion3 .notion
 ln -s $old/awesome ~/.config/awesome
 ln -s $old/i3 .i3
+mkdir -p .config/i3status
+ln -s $old/i3/i3status.conf ~/.config/i3status/config
 # vim
 ln -s $old/vim .vim
 ln -s $old/vimrc .vimrc
@@ -44,3 +49,6 @@ ln -s $old/cmus/rose-pine.theme ~/.config/cmus/rose-pine.theme
 
 # kitty
 ln -s $old/kitty ~/.config/kitty
+
+# qutebrowser
+ln -s $old/qutebrowser ~/.config/qutebrowser

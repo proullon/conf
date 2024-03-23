@@ -8,6 +8,7 @@ set incsearch               " incremental search
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set wildmode=longest,list   " get bash-like tab completions
+set autoread                " reload file modified outside of nvim automatically
 filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set clipboard=unnamedplus   " using system clipboard
@@ -382,7 +383,7 @@ require("obsidian").setup(
   -- Optional, customize the backlinks interface.
   backlinks = {
     -- The default height of the backlinks pane.
-    height = 10,
+    height = 15, -- 10
     -- Whether or not to wrap lines.
     wrap = true,
   },
@@ -426,7 +427,7 @@ require("obsidian").setup(
   -- 1. "current" (the default) - to always open in the current window
   -- 2. "vsplit" - to open in a vertical split if there's not already a vertical split
   -- 3. "hsplit" - to open in a horizontal split if there's not already a horizontal split
-  open_notes_in = "current",
+  open_notes_in = "vsplit",
 
   -- Optional, configure additional syntax highlighting / extmarks.
   -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
