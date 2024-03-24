@@ -342,11 +342,14 @@ let light_theme = {
 
 $env.config = {
   show_banner: false,
+  # Integration with kitty
+  shell_integration: true,
 }
 
 export-env {
   let-env EDITOR = "nvim"
 }
+
 
 source ~/.config/nushell/git-completions.nu
 source ~/.config/nushell/alias.nu
