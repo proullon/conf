@@ -10,8 +10,7 @@ python3 -m pip install --user --upgrade pynvim
 # rust
 curl https://sh.rustup.rs -sSf | sh
 # oh-my-posh
-sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-`uname -m` -O /usr/local/bin/oh-my-posh
-sudo chmod +x /usr/local/bin/oh-my-posh
+# install oh-my-posh bin
 mkdir ~/.poshthemes
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
 unzip ~/.poshthemes/themes.zip -d ~/.poshthemes

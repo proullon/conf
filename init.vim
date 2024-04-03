@@ -350,7 +350,7 @@ require("obsidian").setup(
   --  * "use_path_only", e.g. '[[foo-bar.md]]'
   -- Or you can set it to a function that takes a table of options and returns a string, like this:
   wiki_link_func = function(opts)
-    return require("obsidian.util").prepend_node_id(opts)
+    return require("obsidian.util").wiki_link_id_prefix(opts)
   end,
 
   -- Optional, customize how markdown links are formatted.
@@ -359,7 +359,7 @@ require("obsidian").setup(
   end,
 
   -- Either 'wiki' or 'markdown'.
-  preferred_link_style = "wiki",
+  preferred_link_style = "markdown",
 
   -- Optional, boolean or a function that takes a filename and returns a boolean.
   -- `true` indicates that you don't want obsidian.nvim to manage frontmatter.
