@@ -271,9 +271,10 @@ require("obsidian").setup(
     },
   },
 
-  -- Optional, set to true to use the current directory as a vault; otherwise
-  -- the first workspace is opened by default.
-  detect_cwd = false,
+  -- Where to put new notes created from completion. Valid options are
+  --  * "current_dir" - put new notes in same directory as the current buffer.
+  --  * "notes_subdir" - put new notes in the default notes subdirectory.
+  new_notes_location = "current_dir",
 
   -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
   -- levels defined by "vim.log.levels.*".
@@ -297,26 +298,6 @@ require("obsidian").setup(
 
     -- Trigger completion at 2 chars.
     min_chars = 2,
-
-    -- Where to put new notes created from completion. Valid options are
-    --  * "current_dir" - put new notes in same directory as the current buffer.
-    --  * "notes_subdir" - put new notes in the default notes subdirectory.
-    new_notes_location = "current_dir",
-
-    -- Control how wiki links are completed with these (mutually exclusive) options:
-    --
-    -- 1. Whether to add the note ID during completion.
-    -- E.g. "[[Foo" completes to "[[foo|Foo]]" assuming "foo" is the ID of the note.
-    -- Mutually exclusive with 'prepend_note_path' and 'use_path_only'.
-    prepend_note_id = true,
-    -- 2. Whether to add the note path during completion.
-    -- E.g. "[[Foo" completes to "[[notes/foo|Foo]]" assuming "notes/foo.md" is the path of the note.
-    -- Mutually exclusive with 'prepend_note_id' and 'use_path_only'.
-    prepend_note_path = false,
-    -- 3. Whether to only use paths during completion.
-    -- E.g. "[[Foo" completes to "[[notes/foo]]" assuming "notes/foo.md" is the path of the note.
-    -- Mutually exclusive with 'prepend_note_id' and 'prepend_note_path'.
-    use_path_only = false,
   },
 
   -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
@@ -353,6 +334,33 @@ require("obsidian").setup(
     return suffix
   end,
 
+  -- Optional, customize how note file names are generated given the ID, target directory, and title.
+  ---@param spec { id: string, dir: obsidian.Path, title: string|? }
+  ---@return string|obsidian.Path The full path to the new note.
+  note_path_func = function(spec)
+    -- This is equivalent to the default behavior.
+    local path = spec.dir / tostring(spec.id)
+    return path:with_suffix(".md")
+  end,
+
+  -- Optional, customize how wiki links are formatted. You can set this to one of:
+  --  * "use_alias_only", e.g. '[[Foo Bar]]'
+  --  * "prepend_note_id", e.g. '[[foo-bar|Foo Bar]]'
+  --  * "prepend_note_path", e.g. '[[foo-bar.md|Foo Bar]]'
+  --  * "use_path_only", e.g. '[[foo-bar.md]]'
+  -- Or you can set it to a function that takes a table of options and returns a string, like this:
+  wiki_link_func = function(opts)
+    return require("obsidian.util").prepend_node_id(opts)
+  end,
+
+  -- Optional, customize how markdown links are formatted.
+  markdown_link_func = function(opts)
+    return require("obsidian.util").markdown_link(opts)
+  end,
+
+  -- Either 'wiki' or 'markdown'.
+  preferred_link_style = "wiki",
+
   -- Optional, boolean or a function that takes a filename and returns a boolean.
   -- `true` indicates that you don't want obsidian.nvim to manage frontmatter.
   disable_frontmatter = false,
@@ -378,14 +386,6 @@ require("obsidian").setup(
     time_format = "%H:%M",
     -- A map for custom variables, the key should be the variable and the value a function
     substitutions = {},
-  },
-
-  -- Optional, customize the backlinks interface.
-  backlinks = {
-    -- The default height of the backlinks pane.
-    height = 15, -- 10
-    -- Whether or not to wrap lines.
-    wrap = true,
   },
 
   -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
