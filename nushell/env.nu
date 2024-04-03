@@ -69,6 +69,7 @@ $env.PATH = ($env.PATH | append ':/home/proullon/work/android-studio/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/work/cmdline-tools/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/platform-tools')
 $env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/build-tools')
+$env.PATH = ($env.PATH | append ':/usr/local/go/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/go/bin')
 $env.CHROME_EXECUTABLE = "/usr/bin/chromium"
 
