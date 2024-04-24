@@ -2,6 +2,7 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
+# ripgrep
 # latex
 sudo apt-get install dvipng net-tools tmux libssl-dev pkg-config curl htop cmake gettext latexmk texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 # python

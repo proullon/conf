@@ -83,6 +83,7 @@ call plug#begin("~/.vim/plugged")
  " Telescope
  Plug 'nvim-lua/plenary.nvim'
  Plug 'nvim-telescope/telescope.nvim'
+ Plug 'davvid/telescope-git-grep.nvim'
  " Flutter
  Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
  Plug 'akinsho/flutter-tools.nvim'
@@ -101,6 +102,7 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 " Map Ctrl-P to Telescope find_files in normal mode
 nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-g> <cmd>Telescope git_grep<cr>
 nnoremap <C-o> <cmd>ObsidianQuickSwitch<cr>
 
 " Spelling
@@ -229,6 +231,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('telescope').setup{
   defaults = {
+    file_ignore_patterns = {
+        "vendor/"
+    },
+
     -- Default configuration for telescope goes here:
     -- config_key = value,
     mappings = {
