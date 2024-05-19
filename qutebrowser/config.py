@@ -1,4 +1,5 @@
 import subprocess
+import rosepine
 #
 # NOTE: config.py is intended for advanced users who are comfortable
 # with manually migrating the config file on qutebrowser upgrades. If
@@ -11,7 +12,13 @@ import subprocess
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
-config.load_autoconfig(False)
+config.load_autoconfig()
+
+# Rose Pine theme
+rosepine.setup(c, 'rose-pine-moon', True)
+
+# Set default page
+c.url.default_page = "http://rpi4:8086/"
 
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebEngine and QtWebKit (not
@@ -322,10 +329,6 @@ def read_xresources(prefix):
         prop, _, value = line.partition(':\t')
         props[prop] = value
     return props
-
-
-xresources = read_xresources('*')
-c.colors.statusbar.normal.bg = xresources['*.background']
 
 
 # Downloads
