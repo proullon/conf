@@ -19,6 +19,7 @@ ln -s $old/gitconfig .gitconfig
 ln -s $old/ion3 .notion
 ln -s $old/awesome ~/.config/awesome
 ln -s $old/i3 .i3
+ln -s $old/hypr .config/hypr
 mkdir -p .config/i3status
 ln -s $old/i3/i3status.conf ~/.config/i3status/config
 # vim
