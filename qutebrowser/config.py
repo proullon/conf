@@ -20,6 +20,11 @@ rosepine.setup(c, 'rose-pine-moon', True)
 # Set default page
 c.url.default_page = "http://rpi4:8086/"
 
+# Config hint. I want big readable hint with COLEMAK keys
+c.fonts.hints = "bold 16px 'DejaVu Sans Mono'"
+c.hints.chars = "tensadl"
+
+
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebEngine and QtWebKit (not
 # recommended). QtWebEngine is Qt's official successor to QtWebKit, and

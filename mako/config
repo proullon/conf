@@ -1,8 +1,8 @@
 sort=-time
 layer=overlay
 background-color=#2e3440
-width=400
-height=110
+width=500
+height=200
 border-size=2
 border-color=#88c0d0
 border-radius=15
@@ -15,13 +15,13 @@ font=monospace 14
 [urgency=low]
 border-color=#3e8fb0
 background-color=#393955
-default-timeout=2000
+default-timeout=5000
 format=<b><span foreground='#3e8fb0'>%s</span></b>\n%b
 
 [urgency=normal]
 border-color=#f6c177
 background-color=#443c53
-default-timeout=4000
+default-timeout=10000
 format=<b><span foreground='#f6c177'>%s</span></b>\n%b
 
 [urgency=high]
