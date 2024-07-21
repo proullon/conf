@@ -36,5 +36,5 @@ alias tls = tmux -2 list-session
 alias ta = tmux -2 attach-session -t 
 alias tn = tmux -2 new -s 
 
+alias gal = galacticad --home /mnt/ssd/galactica
 
-alias kafka-ui = docker run -p 9090:8080 --name kafka-ui -e KAFKA_CLUSTERS_0_NAME=kafka.bliink.io -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=34.79.109.248:9092,35.233.30.14:9092,35.195.193.230:9092 -d provectuslabs/kafka-ui:latest
