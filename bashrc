@@ -112,6 +112,9 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias k=kubectl
+
+export PATH=$PATH:/opt/rocm/bin
+
 complete -F __start_kubectl k
 . "$HOME/.cargo/env"
 export GPG_TTY=$(tty)

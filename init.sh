@@ -11,7 +11,7 @@ ln -s $old/bashrc .bashrc
 ln -s $old/bash_aliases .bash_aliases
 ln -s $old/bash_profile .bash_profile
 # Nushell
-ln -s $old/nushell .config/.
+ln -s $old/nushell .config/nushell
 # Git
 ln -s $old/git-prompt.sh .git-prompt.sh
 ln -s $old/gitconfig .gitconfig
@@ -45,6 +45,7 @@ ln -s $old/pms ~/.config/pms
 ln -s $old/beets ~/.config/beets
 
 # cmus
+mkdir ~/.config/cmus
 ln -s $old/cmus/rc ~/.config/cmus/rc
 ln -s $old/cmus/rose-pine.theme ~/.config/cmus/rose-pine.theme
 
