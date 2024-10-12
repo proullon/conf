@@ -54,3 +54,6 @@ ln -s $old/kitty ~/.config/kitty
 
 # qutebrowser
 ln -s $old/qutebrowser ~/.config/qutebrowser
+
+# zsh
+ln -s /home/proullon/work/src/github.com/proullon/conf/zshrc /home/proullon/.zshrc
