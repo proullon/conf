@@ -17,7 +17,6 @@ alias bim = nvim
 alias v = nvim -c "nerdtree" .
 
 # git aliases
-alias g = git gui &
 alias lg = git log --graph --all --decorate
 alias gt = git status
 alias gd = git diff
