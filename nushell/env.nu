@@ -72,6 +72,7 @@ $env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/build-tools')
 $env.PATH = ($env.PATH | append ':/usr/local/go/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/go/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/.foundry/bin')
+$env.PATH = ($env.PATH | append ':/home/proullon/.local/bin')
 $env.CHROME_EXECUTABLE = "/usr/bin/chromium"
 
 ################# Test oh-my-posh config

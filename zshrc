@@ -37,3 +37,5 @@ alias ta="tmux -2 attach-session -t"
 alias tn="tmux -2 new -s"
 
 export PATH=$PATH:/opt/rocm/bin
+export PATH=$PATH:/home/proullon/go/bin
+export PATH=$PATH:/home/proullon/.local/bin
