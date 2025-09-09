@@ -130,7 +130,7 @@ require('feline').setup({
 })
 require('mason').setup()
 require('mason-lspconfig').setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls", "ast_grep", "pyre", "pylsp" },
+    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls", "ast_grep", "pyre" },
 }
 
 -- Add additional capabilities supported by nvim-cmp
@@ -140,7 +140,7 @@ local lspconfig = require('lspconfig')
 
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pylsp', 'gopls', 'golangci_lint_ls' }
+local servers = { 'rust_analyzer', 'gopls', 'golangci_lint_ls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
