@@ -63,7 +63,6 @@ $env.TERM = "xterm-256color"
 $env.EDITOR = "nvim"
 $env.VISUAL = "nvim"
 
-$env.NVIM_LISTEN_ADDRESS = "/tmp/nvimsocket"
 $env.PATH = ($env.PATH | append ':/home/proullon/work/flutter/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/work/android-studio/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/work/cmdline-tools/bin')
