@@ -75,4 +75,3 @@ output "HDMI-A-2" {
     dpms on
 }
 
-set $background /home/proullon/.config/sway/background.png
