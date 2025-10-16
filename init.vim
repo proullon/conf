@@ -129,8 +129,11 @@ require('feline').setup({
     preset = 'noicon'
 })
 require('mason').setup()
+--require('mason-lspconfig').setup {
+--    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls", "ast_grep", "pyre" },
+--}
 require('mason-lspconfig').setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls", "ast_grep", "pyre" },
+    ensure_installed = { "lua_ls", "gopls", "golangci_lint_ls" },
 }
 
 -- Add additional capabilities supported by nvim-cmp
@@ -140,6 +143,7 @@ local lspconfig = require('lspconfig')
 
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+-- local servers = { 'rust_analyzer', 'gopls', 'golangci_lint_ls' }
 local servers = { 'rust_analyzer', 'gopls', 'golangci_lint_ls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -147,6 +151,61 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.rust_analyzer.setup({
+    on_attach = function(client, bufnr)
+        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+    end,
+  settings = {
+    ["rust-analyzer"] = {
+      imports = {
+        granularity = {
+          group = "crate",
+        },
+        prefix = "self",
+      },
+      -- Keep cargo work modest
+      cargo = {
+        allTargets = false,                       -- don’t build tests/examples by default
+        extraEnv = { CARGO_BUILD_JOBS = "1" },    -- limit parallel jobs (use a number you like)
+        buildScripts = {
+            enable = false, -- try true; set to false if spikes persist
+            -- this tells rust-analyzer to pass `-j4` to cargo (replace 4 with what you want)
+            numJobs = 1,
+            },
+      },
+      rustfmt = {
+        extraArgs = {
+          "+nightly",
+          "--config", "format_code_in_doc_comments=true",
+          "--config", "edition=2024",
+          "--config", "imports_granularity=Crate",
+          "--config", "group_imports=StdExternalCrate",
+        }
+      },
+
+      -- If you see CPU spikes from macros, temporarily flip this to false
+      procMacro = { enable = false },
+
+      -- Avoid scanning huge dirs
+      files = {
+        excludeDirs = { "target", "node_modules", "dist", "build", ".venv", ".git" },
+        -- watcher = "client", -- Uncomment if your setup supports client-side watching
+      },
+
+      -- Keep memory in check (megabytes)
+      lruCapacity = 12,
+
+      -- Make on-save checking lighter or turn it off
+      checkOnSave = {
+        enable = true,            -- set to false to disable completely
+        command = "check",        -- or "clippy" if you prefer lints (heavier)
+        allTargets = false,
+      },
+    },
+  },
+})
+
 
 -- luasnip setup
 local luasnip = require 'luasnip'
