@@ -621,4 +621,14 @@ require("obsidian").setup(
 }
 )
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+vim.api.nvim_create_user_command('GPT', function(opts)
+  local prompt = opts.args
+  local handle = io.popen("gpt " .. vim.fn.shellescape(prompt))
+  local result = handle:read("*a")
+  handle:close()
+  print(result)
+end, { nargs = 1, complete = 'file' })
+
+
 END

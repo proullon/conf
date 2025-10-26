@@ -74,5 +74,7 @@ $env.PATH = ($env.PATH | append ':/home/proullon/.foundry/bin')
 $env.PATH = ($env.PATH | append ':/home/proullon/.local/bin')
 $env.CHROME_EXECUTABLE = "/usr/bin/chromium"
 
+$env.OPENAI_API_KEY = (open ~/.config/openai/key | str trim)
+
 ################# Test oh-my-posh config
 #oh-my-posh init nu
