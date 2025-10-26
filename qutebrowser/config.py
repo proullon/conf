@@ -15,6 +15,8 @@ import rosepine
 config.load_autoconfig()
 
 # Rose Pine theme
+# Need to clone rosepine
+# git clone https://github.com/aalbegr/qutebrowser-rose-pine.git ~/.config/qutebrowser/rosepine
 rosepine.setup(c, 'rose-pine-moon', True)
 
 # Set default page
