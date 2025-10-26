@@ -349,3 +349,4 @@ $env.config = {
 source ~/.config/nushell/git-completions.nu
 source ~/.config/nushell/alias.nu
 source ~/.config/nushell/oh-my-posh.nu
+source $"($nu.home-path)/.cargo/env.nu"

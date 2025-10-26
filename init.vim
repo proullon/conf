@@ -120,6 +120,7 @@ let g:vimtex_view_general_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+let g:rustfmt_autosave = 1
 
 lua << END
 -- Start git setup in status bbar
@@ -133,7 +134,7 @@ require('mason').setup()
 --    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls", "ast_grep", "pyre" },
 --}
 require('mason-lspconfig').setup {
-    ensure_installed = { "lua_ls", "gopls", "golangci_lint_ls" },
+    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "golangci_lint_ls" },
 }
 
 -- Add additional capabilities supported by nvim-cmp
@@ -152,55 +153,74 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+
 lspconfig.rust_analyzer.setup({
+--    on_attach = function(client, bufnr)
+--        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+--    end,
+
     on_attach = function(client, bufnr)
         vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+
+        -- Format à la sauvegarde
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            callback = function()
+                vim.lsp.buf.format({
+                    async = false,
+                    filter = function(c)
+                        return c.name == "rust_analyzer"
+                    end,
+                })
+            end,
+        })
     end,
-  settings = {
+
+ settings = {
     ["rust-analyzer"] = {
-      imports = {
-        granularity = {
-          group = "crate",
-        },
-        prefix = "self",
-      },
-      -- Keep cargo work modest
-      cargo = {
-        allTargets = false,                       -- don’t build tests/examples by default
-        extraEnv = { CARGO_BUILD_JOBS = "1" },    -- limit parallel jobs (use a number you like)
-        buildScripts = {
-            enable = false, -- try true; set to false if spikes persist
-            -- this tells rust-analyzer to pass `-j4` to cargo (replace 4 with what you want)
-            numJobs = 1,
-            },
+      diagnostics = {
+        styleLints = {
+          enable = true,
+        }
       },
       rustfmt = {
         extraArgs = {
           "+nightly",
           "--config", "format_code_in_doc_comments=true",
-          "--config", "edition=2024",
-          "--config", "imports_granularity=Crate",
-          "--config", "group_imports=StdExternalCrate",
+          "--config", "edition=2024"
         }
       },
-
-      -- If you see CPU spikes from macros, temporarily flip this to false
-      procMacro = { enable = false },
-
+      check = {
+        command = "clippy",
+        extraArgs = { "--", "-Wclippy::pedantic", "-Aclippy::redundant_else", "-Aclippy::too_many_lines" },
+      },
+      checkOnSave = true,
+      rustc = {
+        source = "discover"
+      },
+      assist = {
+        importPrefix = "crate"
+      },
+      cargo = {
+        autoreload = true
+      },
+      diagnostics = {
+        enable = true,
+        enableExperimental = true,
+      },
+      cargo = {
+        allTargets = false,                       -- don’t build tests/examples by default
+        extraEnv = { CARGO_BUILD_JOBS = "4" },    -- limit parallel jobs (use a number you like)
+        buildScripts = {
+            enable = true, -- try true; set to false if spikes persist
+            -- this tells rust-analyzer to pass `-j4` to cargo (replace 4 with what you want)
+            numJobs = 4,
+            },
+      },
       -- Avoid scanning huge dirs
       files = {
         excludeDirs = { "target", "node_modules", "dist", "build", ".venv", ".git" },
         -- watcher = "client", -- Uncomment if your setup supports client-side watching
-      },
-
-      -- Keep memory in check (megabytes)
-      lruCapacity = 12,
-
-      -- Make on-save checking lighter or turn it off
-      checkOnSave = {
-        enable = true,            -- set to false to disable completely
-        command = "check",        -- or "clippy" if you prefer lints (heavier)
-        allTargets = false,
       },
     },
   },
