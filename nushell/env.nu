@@ -76,5 +76,9 @@ $env.CHROME_EXECUTABLE = "/usr/bin/chromium"
 
 $env.OPENAI_API_KEY = (open ~/.config/openai/key | str trim)
 
+$env.ANDROID_HOME = "/home/proullon/Android/Sdk"
+$env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/platform-tools')
+$env.PATH = ($env.PATH | append ':/home/proullon/Android/Sdk/cmdline-tools/latest/bin')
+
 ################# Test oh-my-posh config
 #oh-my-posh init nu
