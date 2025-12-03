@@ -1,6 +1,16 @@
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*", -- use latest release
+  cmd = {
+    "Obsidian",
+    "ObsidianToday",
+    "ObsidianYesterday",
+    "ObsidianTomorrow",
+    "ObsidianNew",
+    "ObsidianOpen",
+    "ObsidianSearch",
+    "ObsidianBacklinks",
+  },
   ft = "markdown",
   dependencies = {
     "nvim-lua/plenary.nvim",
