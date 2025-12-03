@@ -10,7 +10,7 @@
 #    $env.POSH_SHELL_VERSION = (version | get version)
 #
 #    # PROMPTS
-#    $env.PROMPT_MULTILINE_INDICATOR = (^"/usr/local/bin/oh-my-posh" print secondary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.POSH_SHELL_VERSION)")
+#    $env.PROMPT_MULTILINE_INDICATOR = (^"/usr/bin/oh-my-posh" print secondary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.POSH_SHELL_VERSION)")
 #
 #    $env.PROMPT_COMMAND = { ||
 #        # We have to do this because the initial value of `$env.CMD_DURATION_MS` is always `0823`,
@@ -23,7 +23,7 @@
 #        let clear = (history | last 1 | get 0.command) == "clear"
 #
 #        let width = ((term size).columns | into string)
-#        ^"/usr/local/bin/oh-my-posh" print primary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.POSH_SHELL_VERSION)" $"--execution-time=($cmd_duration)" $"--error=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)" $"--cleared=($clear)"
+#        ^"/usr/bin/oh-my-posh" print primary $"--config=($env.POSH_THEME)" --shell=nu $"--shell-version=($env.POSH_SHELL_VERSION)" $"--execution-time=($cmd_duration)" $"--error=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)" $"--cleared=($clear)"
 #    }
 #}
 
@@ -44,7 +44,7 @@ $env.POSH_SESSION_ID = (echo "c93a76cf-18ad-4730-bac9-dc34478cca15")
 $env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
 
-let _omp_executable: string = (echo "/home/proullon/.local/bin/oh-my-posh")
+let _omp_executable: string = (echo "/usr/bin/oh-my-posh")
 
 # PROMPTS
 
