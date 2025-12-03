@@ -39,9 +39,12 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
-    config = function()
-      require("neo-tree").setup({})
-    end,
+    opts = {
+      window = {
+        width = 22,
+        position = "left",
+      },
+    },
   },
 }
 
