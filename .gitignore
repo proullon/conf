@@ -6,4 +6,5 @@ qutebrowser/bookmarks/
 /poshthemes/.poshthemes/
 /qutebrowser/rosepine/
 /qutebrowser/quickmarks
+/qutebrowser/qsettings/
 /nvim/lazy-lock.json
