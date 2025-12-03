@@ -71,13 +71,35 @@ return {
     ---------------------------------------------------------------------------
     frontmatter = {
       enabled = true,
-      -- Minimal frontmatter generator
+
+      -- Disable strict alias type checking
+      validate = {
+          alias = false,
+      },
+
+      -- Normalize frontmatter fields so that aliases etc. are always strings.
+      -- Avoid issues with number only notes.
       func = function(note)
+        local function normalize(v)
+          if type(v) == "number" then
+            return tostring(v)
+          elseif type(v) == "string" then
+            return v
+          elseif type(v) == "table" then
+            local out = {}
+            for _, x in ipairs(v) do
+              table.insert(out, normalize(x))
+            end
+            return out
+          end
+          return v
+        end
+
         return {
-          id = note.id,
-          aliases = note.aliases,
+          id = normalize(note.id),
+          aliases = normalize(note.aliases),
           tags = note.tags,
-        }
+      }
       end,
     },
 
