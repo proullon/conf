@@ -15,7 +15,7 @@ map("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
 map("n", "<C-g>", "<cmd>Telescope git_grep<CR>", opts)
 
 -- Obsidian quick switch
-map("n", "<C-o>", "<cmd>ObsidianQuickSwitch<CR>", opts)
+map("n", "<C-o>", "<cmd>Obsidian quick_switch<CR>", opts)
 
 -- LSP diagnostics
 map("n", "<space>e", vim.diagnostic.open_float, opts)
