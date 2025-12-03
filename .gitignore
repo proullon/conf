@@ -5,3 +5,5 @@ vim/plugged
 qutebrowser/bookmarks/
 /poshthemes/.poshthemes/
 /qutebrowser/rosepine/
+/qutebrowser/quickmarks
+/nvim/lazy-lock.json
