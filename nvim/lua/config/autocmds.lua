@@ -8,3 +8,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- Enable spellchecking for relevant filetypes
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "md", "tex", "latex" },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { "en_gb", "fr" }
+  end,
+})
+

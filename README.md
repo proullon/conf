@@ -24,5 +24,5 @@ git clone https://github.com/aalbegr/qutebrowser-rose-pine.git ~/.config/qutebro
 ## Nushell and oh-my-posh
 
 ```
- oh-my-posh init nu --config ~/.poshthemes/ys.omp.json
+oh-my-posh init nu --config /home/proullon/work/src/github.com/proullon/conf/poshthemes/ys.omp.json
 ```
