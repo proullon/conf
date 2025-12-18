@@ -7,4 +7,5 @@ qutebrowser/bookmarks/
 /qutebrowser/rosepine/
 /qutebrowser/quickmarks
 /qutebrowser/qsettings/
+/qutebrowser/autoconfig.yml
 /nvim/lazy-lock.json
