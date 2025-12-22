@@ -9,3 +9,4 @@ qutebrowser/bookmarks/
 /qutebrowser/qsettings/
 /qutebrowser/autoconfig.yml
 /nvim/lazy-lock.json
+/nvim/spell
