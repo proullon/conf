@@ -39,9 +39,8 @@ vim.cmd("syntax on")
 
 -- Enable conceal for Obsidian UIs, but only in markdown buffers
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.opt.conceallevel = 2
-  end,
+    pattern = "markdown",
+    callback = function()
+        vim.opt.conceallevel = 2
+    end,
 })
-
