@@ -133,7 +133,7 @@ source ~/.config/nushell/alias.nu
 source ~/.config/nushell/oh-my-posh.nu
 
 # ---------- ENV STUFF ----------
-source $"($nu.home-path)/.cargo/env.nu"
+source $"($nu.home-dir)/.cargo/env.nu"
 
 # Ensures PATH and conversions work everywhere
 $env.ENV_CONVERSIONS = {
